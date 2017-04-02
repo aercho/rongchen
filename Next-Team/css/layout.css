@@ -1,0 +1,9 @@
+#left-drawer{
+	z-index: 2001;
+	top: 104px;
+}
+#main_container{
+	position: relative;
+	top: 120px;
+	z-index: -1;
+}
