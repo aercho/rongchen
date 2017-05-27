@@ -1,0 +1,69 @@
+#member_data_myself{
+	width: 540px;
+	margin: 30px auto;
+}
+
+#member_data_myself .personal{
+	width: 220px;
+	height: 170px;
+	margin-left: 160px;
+}
+#member_data_myself .personal h2{
+	margin: 0 auto;
+	text-align: center;
+	width: 50px;
+	height: 51px;
+	background: url(../images/personal.png);
+}
+#member_data_myself .personal p{
+	text-align: center;
+	margin: 15px 0;
+	font-weight: bold;
+}
+#member_data_myself .personal .parsonal-details{
+	width: 220px;
+	height: 66px;
+
+	margin: 0 auto;
+	border: 1px solid #ddd;
+}
+#member_data_myself .personal span{
+	display: inline-block;
+	width: 70px;
+	margin-top: 10px;
+	padding: 5px 0;
+	text-align: center;
+	color: #666;
+	font-size: 14px;
+
+}
+#member_data_container{
+	width: 540px;
+	margin: 30px auto;
+}
+
+#member_data_container tr{
+	height: 50px;
+	font-size: 14px;
+}
+#member_data_container td{
+	width: 440px;
+}
+#member_data_container th,#member_data_container tr td:nth-child(3){
+	width: 50px;
+	
+}
+#member_data_container tr td:nth-child(3){
+	color: #6dafc4;
+	cursor: pointer;
+}
+#member_data_container th{
+	text-align: left;
+}
+#member_data_container td{
+	text-align: right;
+}
+#member_data_container .face{
+	height: 25px;
+	background: url(../images/user.png) no-repeat center right;
+}

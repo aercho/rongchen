@@ -1,0 +1,253 @@
+
+
+#banner{
+	position: relative;
+	width: 780px;
+	height: 271px;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+.banner-l{
+	float: left;
+	top: 0px;
+	left: 0px;
+	width: 540px;
+	height: 270px;
+	height: 100%;
+	
+}
+.banner_r{
+	float: right;
+	width: 240px;
+	float: right;
+}
+.right-t, .right-b{
+	height: 135px;
+}
+
+#container{
+
+	width: 780px;
+	margin: 20px auto;
+	margin-bottom: 80px;
+
+}
+#part-1{
+	width: 780px;
+	height: 170px;
+}
+#part-1 .publish{
+	float: left;
+	border: 1px solid #ddd;
+	width: 540px;
+	height: 170px;
+}
+#part-1 textarea{
+	display: block;
+	width: 480px;
+	height: 100px;
+	border: 1px solid #ccc;
+	margin: 20px 20px 0 20px;
+}
+.publish .publish-list{
+	float: left;
+	margin: 10px 20px 0 20px;
+}
+.publish li{
+	float: left;
+	list-style: none;
+	height: 25px;
+	line-height: 25px;
+	margin-right: 30px;
+	font-size: 14px;
+	color: #666;
+}
+.publish li:nth-child(1) {
+	padding-left: 35px;
+	background: url(../images/face.png) no-repeat center left;
+}
+.publish li:nth-child(2) {
+	padding-left: 35px;
+	background: url(../images/photo.png) no-repeat center left;
+}
+.publish .publish-btn{
+	float: right;
+	width: 81px;
+	height: 37px;
+	background: url(../images/publish.png) no-repeat center right;
+	margin: 5px 40px 0 0;
+}
+#part-1 .personal{
+	float: right;
+	width: 220px;
+	height: 170px;
+}
+.personal h2{
+	margin: 0 auto;
+	text-align: center;
+	width: 50px;
+	height: 51px;
+	background: url(../images/personal.png);
+	cursor:pointer;
+}
+.personal p{
+	text-align: center;
+	margin: 15px 0;
+	font-weight: bold;
+	cursor:pointer;
+}
+.personal .parsonal-details{
+	width: 220px;
+	height: 66px;
+
+	margin: 0 auto;
+	border: 1px solid #ddd;
+}
+.personal span{
+	display: inline-block;
+	width: 70px;
+	margin-top: 10px;
+	padding: 5px 0;
+	text-align: center;
+	color: #666;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+#part-2,#part-3{
+	width: 540px;
+	margin-top: 20px;
+	border: 1px solid #ddd;
+	position: relative;
+}
+#part-2 .information .face,#part-3 .information .face{
+	width: 50px;
+	height: 51px;
+	margin: 20px 20px;
+	background: url(../images/personal.png);
+}
+#part-2 .user,#part-3 .user{
+	position: absolute;
+	left: 80px;
+	top: 25px;
+	font-weight: bold;
+}
+#part-2 .date,#part-3 .date{
+	position: absolute;
+	left: 80px;
+	top: 50px;
+	color: #ccc;
+	font-size: 12px;
+}
+#part-2 .article,#part-3 .article{
+	font-size: 15px;
+	font-weight: bold;
+	margin: -10px 20px 0 80px;
+	line-height: 25px;
+	word-spacing: 22em;
+}
+#part-2 .list,#part-3 .list{
+	margin-left: 80px;
+}
+#part-2 .list div,#part-3 .list div{
+	display: inline-block;
+	width: 140px;
+	height: 140px;
+	background: #65cd87;
+	margin: 2px 2px 0 0;
+}
+#part-2 .operation,#part-3 .operation{
+	right: 10px;
+}
+#part-2 .operation ul,#part-3 .operation ul{
+	height: 50px;
+}
+#part-2 .operation li,#part-3 .operation li{
+	float: right;
+	margin-right: 30px;
+	height: 50px;
+	line-height: 50px;
+	color: #ccc;
+	font-size: 12px;
+}
+#part-2 .operation li:nth-child(1),
+#part-3 .operation li:nth-child(1){
+	padding-left: 35px;
+	background: url(../images/share.png) no-repeat center left;
+}
+#part-2 .operation li:nth-child(2),
+#part-3 .operation li:nth-child(2){
+	padding-left: 35px;
+	background: url(../images/comment.png) no-repeat center left;
+}
+#part-2 .operation li:nth-child(3),
+#part-3 .operation li:nth-child(3){
+	padding-left: 35px;
+	background: url(../images/zan.png) no-repeat center left;
+}
+#part-3 .comment{
+	height: 120px;
+	margin: 10px 20px 0 80px;
+	position: relative;
+}
+#part-3 .comment .face{
+	position: absolute;
+	width: 50px;
+	height: 51px;
+	top: 10px;
+	background: url(../images/personal.png) no-repeat;
+}
+#part-3 .comment textarea{
+	width: 350px;
+	height: 70px;
+	display: block;
+	position: absolute;
+	left: 70px;
+	top: 0px;
+}
+#part-3 .comment .comment-btn{
+	position: absolute;
+	width: 81px;
+	height: 37px;
+	background: url(../images/publish.png);
+	top: 80px;
+	right: 20px;
+}
+
+#part-3 .show{
+	height: 150px;
+	margin: 0 20px 0 80px;
+	position: relative;
+}
+
+#part-3 .show .face{
+	position: absolute;
+	width: 50px;
+	height: 51px;
+	top: 0;
+	background: url(../images/personal.png) no-repeat;
+}
+#part-3 .show .user{
+	position: absolute;
+	left: 60px;
+	top: 15px;
+	font-size: 15px;
+	color: #666;
+}
+
+#part-3 .show .date{
+	position: absolute;
+	top: 15px;
+	right: 20px;
+	text-align: right;
+}
+#part-3 .show .article{
+	position: absolute;
+	font-size: 15px;
+	font-weight: bold;
+	top: 50px;
+	left: -20px;
+	line-height: 25px;
+}
+
+// active部分

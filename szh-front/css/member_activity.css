@@ -1,0 +1,91 @@
+#member_activity_myself{
+	width: 540px;
+	margin: 30px auto;
+}
+
+#member_activity_myself .personal{
+	width: 220px;
+	height: 170px;
+	margin-left: 160px;
+}
+#member_activity_myself .personal h2{
+	margin: 0 auto;
+	text-align: center;
+	width: 50px;
+	height: 51px;
+	background: url(../images/personal.png);
+}
+#member_activity_myself .personal p{
+	text-align: center;
+	margin: 15px 0;
+	font-weight: bold;
+}
+#member_activity_myself .personal .parsonal-details{
+	width: 220px;
+	height: 66px;
+
+	margin: 0 auto;
+	border: 1px solid #ddd;
+}
+#member_activity_myself .personal span{
+	display: inline-block;
+	width: 70px;
+	margin-top: 10px;
+	padding: 5px 0;
+	text-align: center;
+	color: #666;
+	font-size: 14px;
+	cursor: pointer;
+}
+#member_activity_container{
+	width: 780px;
+	margin: 0 auto;
+	
+}
+
+#member_activity_container .activity > div{
+	display: inline-block;
+	border: 1px solid #ccc;
+	margin: 10px 5px 20px 0;
+	height: 200px;
+	width: 240px;
+}
+#member_activity_container .activity p{
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+#member_activity_container .activity-1 div,
+#member_activity_container .activity-2 div,
+#member_activity_container .activity-3 div{
+	height: 160px;
+	background: #fa5f41;
+}
+
+#member_activity_container .activity-1 p,
+#member_activity_container .activity-2 p,
+#member_activity_container .activity-3 p{
+	font-size: 16px;
+	line-height: 40px;
+	text-indent: 20px;
+	font-weight: normal;
+	color: #666;
+}
+#member_activity_container .activity-1,
+#member_activity_container .activity-2,
+#member_activity_container .activity-3{
+	position: relative;
+}
+#member_activity_container .activity-1 span,
+#member_activity_container .activity-2 span,
+#member_activity_container .activity-3 span{
+	display: block;
+	position: absolute;
+	width: 50px;
+	height: 25px;
+	top: -12px;
+	left: 10px;
+	background: #65cd87;
+	text-align: center;
+	color: #fff;
+}

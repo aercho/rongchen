@@ -1,0 +1,111 @@
+#member_myself{
+	width: 540px;
+	margin: 30px auto;
+}
+
+#member_myself .personal{
+	width: 220px;
+	height: 170px;
+	margin-left: 160px;
+}
+#member_myself .personal h2{
+	margin: 0 auto;
+	text-align: center;
+	width: 50px;
+	height: 51px;
+	background: url(../images/personal.png);
+}
+#member_myself .personal p{
+	text-align: center;
+	margin: 15px 0;
+	font-weight: bold;
+}
+#member_myself .personal .parsonal-details{
+	width: 220px;
+	height: 66px;
+
+	margin: 0 auto;
+	border: 1px solid #ddd;
+}
+#member_myself .personal span{
+	display: inline-block;
+	width: 70px;
+	margin-top: 10px;
+	padding: 5px 0;
+	text-align: center;
+	color: #666;
+	font-size: 14px;
+	cursor: pointer;	
+}
+#myself_container{
+	width: 540px;
+	margin: 10px auto;
+	margin-top: 20px;
+	position: relative;
+}
+#myself_container > div{
+	border: 1px solid #ccc;
+	margin: 20px 0;
+}
+#myself_container .information .face{
+	width: 50px;
+	height: 51px;
+	margin: 20px 20px;
+	background: url(../images/personal.png);
+}
+#myself_container .user{
+	position: absolute;
+	left: 80px;
+	top: 25px;
+	font-weight: bold;
+}
+#myself_container .date{
+	position: absolute;
+	left: 80px;
+	top: 50px;
+	color: #ccc;
+	font-size: 12px;
+}
+#myself_container .article{
+	font-size: 15px;
+	font-weight: bold;
+	margin: -10px 20px 0 80px;
+	line-height: 25px;
+	word-spacing: 22em;
+}
+#myself_container .list{
+	margin-left: 80px;
+}
+#myself_container .list div{
+	display: inline-block;
+	width: 140px;
+	height: 140px;
+	background: #65cd87;
+	margin: 2px 2px 0 0;
+}
+#myself_container .operation{
+	right: 10px;
+}
+#myself_container .operation ul{
+	height: 50px;
+}
+#myself_container .operation li{
+	float: right;
+	margin-right: 30px;
+	height: 50px;
+	line-height: 50px;
+	color: #ccc;
+	font-size: 12px;
+}
+#myself_container .operation li:nth-child(1){
+	padding-left: 35px;
+	background: url(../images/share.png) no-repeat center left;
+}
+#myself_container .operation li:nth-child(2){
+	padding-left: 35px;
+	background: url(../images/comment.png) no-repeat center left;
+}
+#myself_container .operation li:nth-child(3){
+	padding-left: 35px;
+	background: url(../images/zan.png) no-repeat center left;
+}
