@@ -1,0 +1,64 @@
+@import 'template/head.less';
+@import 'template/foot.less';
+@import 'template/positionList.less';
+@import 'property.less';		//定义的公共样式
+
+// 定义一些混入规则
+.fs(@px) {
+	//unit是less函数,删除或更换单位。参数２存在时即更换单位，参数２不存在，则删除单位
+	font-size: unit(@px / 37.5, rem);
+}
+
+.w(@px) {
+	width: unit(@px / 37.5, rem);
+}
+
+.h(@px) {
+	height: unit(@px / 37.5, rem);
+}
+
+.lh(@px) {
+	line-height: unit(@px / 37.5, rem);
+}
+
+.mt(@px) {
+	margin-top: unit(@px / 37.5, rem);
+}
+
+.mr(@px) {
+	margin-right: unit(@px / 37.5, rem);
+}
+.ml(@px) {
+	margin-left: unit(@px / 37.5, rem);
+}
+.mb(@px) {
+	margin-bottom: unit(@px / 37.5, rem);
+}
+
+.pt(@px) {
+	padding-top: unit(@px / 37.5, rem);
+}
+
+.pr(@px) {
+	padding-right: unit(@px / 37.5, rem);
+}
+.pl(@px) {
+	padding-left: unit(@px / 37.5, rem);
+}
+.pb(@px) {
+	padding-bottom: unit(@px / 37.5, rem);
+}
+.bg-w{
+	background-color: #fff;
+}
+
+html,body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
+ 
+body {
+	.fs(16);
+	background-color: @bodyBgColor;
+}

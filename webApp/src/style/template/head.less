@@ -1,0 +1,24 @@
+@import '../variable.less';
+
+.head{
+	background-color: @headBgColor;
+	.h(40);
+	.lh(40);
+	padding: 0 7px;
+	.text{
+		color: @defaultColor;
+	}
+
+	.custom{
+		color: @defaultColor;
+		border-color: @warnColor;
+		//border-style设置为dashed的作用是什么？不理解
+		border-style: dashed;
+		background-color: @warnColor;
+		.mt(7);
+		.pl(15);
+		.pr(15);
+	}
+
+
+}
