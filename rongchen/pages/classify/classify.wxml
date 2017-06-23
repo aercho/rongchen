@@ -1,0 +1,42 @@
+    <import src="../../templates/search.wxml" />
+    <template is="search"></template>
+    
+    <!--左栏-->
+    <view class="leftBox">
+        <view class="plantList" bindtap="getDetail" data-datadetail="{{shineidata}}" style="border-top: none;">室内植物</view>
+        <view class="plantList" bindtap="getDetail" data-datadetail="{{shiwaidata}}">室外植物</view>
+        <view class="plantList" bindtap="getDetail" data-datadetail="{{yuanlindata}}">园林植物</view>
+        <view class="plantList" bindtap="getDetail" data-datadetail="{{yuanyidata}}">园艺植物</view>
+        <view class="plantList" bindtap="getDetail" data-datadetail="{{duoroudata}}" style="border-bottom: 2px solid #777777">多肉植物</view>
+    </view>
+    <!--右栏-->
+    <scroll-view class="rightBox">
+        <block wx:for="{{shineidata}}">
+            <view class="list-item">
+                <image src="{{item.imgSrc}}"></image>
+                <view class="row1">
+                    <view class="productKey">商品名:</view>
+                    <view class="productName">{{item.name}}</view>
+                </view>
+                <view class="row2">
+                    <view class="productKey">商品价格:</view>
+                    <view class="productValue">¥{{item.value}}</view>
+                </view>
+                <view class="row3">
+                    <view class="productKey">星级:</view>
+                    <view class="starNum">
+                        <image src="../../images/Icon/star.png"></image>
+                        <image src="../../images/Icon/star.png"></image>
+                        <image src="../../images/Icon/star.png"></image>
+                        <image src="../../images/Icon/star.png"></image>
+                        <image src="../../images/Icon/star.png"></image>
+                    </view>
+                </view>
+            </view>
+            <view class="getSmallline"></view>
+        </block>
+    </scroll-view>
+    
+        
+
+

@@ -1,0 +1,43 @@
+<view class="items-container carts-list">
+  <scroll-view scroll-y="true" style="height: 1040rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+    <block wx:for="{{cartList}}">
+      <!--列表项重复渲染-->
+      <view class="carts-item" bindtap="bindViewTap">
+        <image wx:if="{{!selectedAllStatus}}" src="../../images/Icon/circle.png" class="circlelist"  ></image>
+        <image wx:if="{{selectedAllStatus}}" class="circlelist" src="../../images/Icon/circle-select.png" ></image>
+        <view>
+          <image class="carts-image" src="{{item.imgSrc}}" mode="aspectFill" />
+        </view>
+        <view class="carts-text">
+          <text class="carts-title">{{item.name}}</text>
+          <view class="weui-cell">
+            <view class="weui-cell__bd weui-cell_primary">
+              <view>
+                <text class="carts-title">所选规格:</text>
+                <text wx:if="{{item.size == 0}}" class="carts-title">大</text>
+                <text wx:elif="{{item.size == 1}}" class="carts-title">中</text>
+                <text wx:else class="carts-title">小</text>
+              </view>
+              <view class="weui-cell__ft">
+                <text class="weui-number weui-number-sub needsclik disabled">-</text>
+                <input type="number" class="weui-number-input" value="{{item.selectedNumber}}" />
+                <text class="weui-number weui-number-plus needsclik disabled">+</text>
+              </view>
+              <text class="carts-price">¥{{item.selectedValue*item.selectedNumber}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <view class="zhanwei" style="height: 160rpx; width: 100%"></view>
+  </scroll-view>
+  
+  <view class="carts-footer">
+    <view bindtap="bindSelectAll">
+      <icon wx:if="{{selectedAllStatus}}" type="success_circle" size="20" />
+      <icon wx:else type="circle" size="20" />
+    </view>
+    <text >全选</text>
+    <view class="button">结算</view>
+  </view>
+</view>

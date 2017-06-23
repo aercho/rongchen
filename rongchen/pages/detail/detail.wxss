@@ -1,0 +1,193 @@
+.banner-container{
+    width: 100%;
+}
+.img-wrapper{
+    width: 100%;
+    height: 400rpx;
+}
+.slide-image{
+    width: 100%;
+    height: 100%;
+}
+
+.tab1 .row_1{
+    border-bottom: 1px solid #ADFF2F;
+    height: 530rpx;
+}
+.tab1 .row_1 text{
+    font-size: 30rpx;
+    color: #333333;
+}
+.tab1 .row_2{
+    border-bottom: 1px solid #ADFF2F;
+    padding-top: 20rpx;
+    padding-bottom: 20rpx;
+    font-size: 30rpx;
+}
+
+.tab1 .row_2 .setSize{
+    margin: 30rpx;
+    padding: 0 10rpx;
+    border: 1px solid #DEDEDE;
+    background: #D1D1D1;
+    border-radius: 10rpx;
+}
+.tab1 .row_2 .active{
+    background: #FF4500;
+}
+.tab1 .row_3{
+    border-bottom: 1px solid #ADFF2F;
+    padding-top: 20rpx;
+    padding-bottom: 20rpx;
+    font-size: 30rpx;
+}
+.tab1 .texttitle{
+    color:#474747;
+    font-size: 30rpx;
+    padding-bottom: 10rpx;
+}
+.tab1 .textcontent{
+    position: absolute;
+    left: 370rpx;
+}
+.tab1 .row_4{
+    border-bottom: 1px solid #ADFF2F;
+    padding-top: 20rpx;
+    padding-bottom: 20rpx;
+    font-size: 30rpx;
+}
+.tab1 .row_5{
+    border-bottom: 1px solid #ADFF2F;
+    padding-top: 20rpx;
+    padding-bottom: 20rpx;
+}
+.comment-list{
+    height: 240rpx;
+}
+.comment-list image{
+    width: 60rpx;
+    height: 60rpx;
+}
+.comment-list text{
+    font-size: 30rpx;
+}
+.comment-user{
+    margin-top:10rpx;
+}
+.DateNumber{
+    color:#707070; margin-left:20rpx;
+}
+.comment-row1{
+    height: 80rpx;
+}
+.comment-row2{
+    display: flex;
+    align-items: flex-end;
+    height: 160rpx;
+}
+.comment-detail{
+    margin: 20rpx 0 10rpx 20rpx;
+}
+
+
+.end-banner{
+    margin-top: 100rpx;
+    position: fixed;
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 100rpx;
+    border-top: 1px solid #4D4D4D;
+    text-align: center;
+    bottom: 0px;
+}
+
+#getlineArea{
+    width: 100%;
+    height: 130rpx;
+    background-color: #DEDEDE;
+}
+
+
+#textarea{
+    width: 6%;
+    justify-content:center;
+    display: inline-block;
+    margin-top: 30rpx;
+    float: left;
+}
+
+.end-banner image{
+    width: 60rpx;
+    height: 60rpx;
+    margin-top: 20rpx;
+    float: left;
+}
+
+#btnCart{
+    font-size: 35rpx;
+    display: inline-block;
+    width: 260rpx;
+    float: right;
+    height: 100%;
+    background: #262626;
+    color: #FFFFFF;
+}
+#SpendMoney{
+    color: #CD0000;
+    margin-left: 10rpx;
+    margin-top: 30rpx;
+    float: left;
+}
+
+/*new add*/
+.swiper-tab{  
+    width: 100%;  
+    border-bottom: 2rpx solid #777777;  
+    text-align: center;  
+    line-height: 80rpx;}  
+.swiper-tab-list{  font-size: 30rpx;  
+    display: inline-block;  
+    width: 33.33%;  
+    color: #777777;  
+}  
+.on{ color: #da7c0c;  
+    border-bottom: 5rpx solid #da7c0c;}  
+  
+.swiper-box{
+    display: block;
+    width: 100%; 
+    height: 1900rpx;
+}
+
+/*tab2*/
+.tab2 .row_1{
+    padding: 10rpx 10rpx;
+    height: 60rpx;
+}
+.tab2 .row_2{
+    padding: 10rpx 10rpx;
+    height: 60rpx;
+}
+.tab2 .row_3{
+    padding: 10rpx 10rpx;
+    height: 60rpx;
+}
+.tab2 .row_4{
+    padding: 10rpx 10rpx;
+    height: 60rpx;
+}
+.tab2 .row_5{
+    padding: 10rpx 10rpx;
+}
+.tab2 .texttile{
+    color: #848484;
+    font-weight: bolder;
+}
+.tab2 .textcontent{
+    position: absolute;
+    left: 400rpx;
+    font-size: 28rpx;
+}
+.tab2-contentTxt{
+    padding: 16rpx 0rpx;
+}
