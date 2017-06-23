@@ -1,0 +1,99 @@
+<!--index.wxml-->
+<!--导入模板-->
+<import src="../../templates/search.wxml" />
+<view class="container">
+  <scroll-view scroll-y="true" bindscrolltoupper="pullDownRefresh" >
+  <template is="search"></template>
+            
+  <!--轮播图-->
+    <view class='banner-container'>
+      <swiper class="img-wrapper" indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true" indicator-color="rgba(255,255,255,.8)" indicator-active-color="rgba(0,0,0,.5)">
+        <block wx:for="{{imgUrls}}" wx:key="*this">
+          <swiper-item>
+            <image src="{{item}}" class="slide-image" width="355" height="350"/>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+
+    <!--公司Logo及文字介绍-->
+    <view class="Introduce">
+      <view class="companyView1 lf">
+        <image src="../../images/Logo.png" style="width:300rpx; height:100rpx; display:block"></image>
+        <view class="companyName">XX市XX绿化有限公司</view>
+        <text class="contact">电话：0795-320xxxx
+              邮箱：1649099xxxxx.com
+              公司网址：www.rong-cheng.com.cn
+              地址：江西省宜春市袁州区凤凰街道学府路558号
+        </text>
+      </view>
+      <view class="companyView2 lf">
+        
+        <text class="companyIntro">XX市XX园林绿化有限责任公司(自然人独资)创立于2015年1月，注册资金500万元整，公司是一家集园林规划、景观工程施工、绿化维护、观赏植物租售、苗木批发零售、盆景制作、艺术插花、节令布置、景观灯光..</text>
+      </view>
+    </view>
+    <view class="list-container">
+      <!--超级抢购模块-->
+      <view class="Purchase">
+        <text class="Purtext">超级抢购</text>
+        <view class="PurchaseBox">
+          <block wx:for="{{PurList}}" wx:key="*this">
+            <view class="Purlist-item" bindtap="getDetail" data-detail="{{item.id}}" >
+              <image src="{{item.imgsrc}}" class="item-img"></image>
+              <view class="simpleIntro">
+                <text class="itemName">{{item.name}}</text>
+                <view style="display: flex; justify-content:space-around">
+                  <text class="oldPrice del">¥{{item.oldvalue}}</text>
+                  <text class="newPrice">¥{{item.value}}</text>
+                </view>
+                
+              </view>
+            </view>
+          </block>
+        </view>
+      </view>
+      <!--分割线-->
+      <view class="divide"></view>
+      <!--店长推荐模块-->
+      <view class="Recommend">
+        <text class="Rectext">店长推荐</text>
+        <view class="RecommendBox">
+          <block wx:for="{{RecList}}" wx:key="*this">
+            <view class="Reclist-item" bindtap="getDetail" data-detail="{{item.id}}">
+              <image src="{{item.imgsrc}}" class="item-img"></image>
+              <view class="simpleIntro">
+                <text class="itemName">{{item.name}}</text>
+              </view>
+              <view style="display:flex; flex-direction: row;justify-content: center;">
+                <!--循环5次，加上逗号居然逗号也会算一次！-->
+                  <image wx:for="12345" wx:key="*this" src="../../images/Icon/star.png" style="width:30rpx; height:30rpx;"></image>
+              
+              </view>
+
+            </view>
+          </block>
+        </view>
+      </view>
+    </view>
+    <!--公司Logo及文字介绍-->
+    <!--<view class="Introduce">
+      <view class="companyView1 lf">
+        <view class="row1">
+          <image src="../../images/Logo.png" style=" width:300rpx; height:100rpx;"></image>
+          <view class="companyName">宜春市荣成园林绿化有限公司</view>
+        </view>
+        <view class="row2">
+          <view class="companyView2 lf">
+          <text class="companyIntro">宜春市荣成园林绿化有限责任公司(自然人独资)创立于2015年1月，注册资金500万元整，公司是一家集园林规划、景观工程施工、绿化维护、观赏植物租售、苗木批发零售、盆景制作、艺术插花、节令布置、景观灯光..</text>
+        </view>
+        </view>
+        <text class="contact">电话：0795-320xxxx
+        地址：江西省宜春市袁州区凤凰街道学府路558号
+              邮箱：1649099xxxxx.com      公司网址：www.rong-cheng.com.cn
+        </text>
+      </view>-->
+      
+    <!--</view>-->
+  </scroll-view>
+</view>

@@ -1,0 +1,71 @@
+<import src="../../templates/search.wxml" />
+<template is="search"></template>
+
+<scroll-view style="height:2000rpx;"  scroll-y="true" scroll-top="{{scrollTop.scroll_top}}" bindscroll="scrollTopFun">
+    <view class="headerBar">
+    <!--data-itemnum代表列表项序号，用来在js中设置激活态activeitem。-->
+        <view class="canshu" bindtap="chageActive" data-itemnum="0">
+            <view wx:if="{{activeitem == 0}}" class="oderBy active">名称</view>
+            <view wx:else class="oderBy">名称</view>
+            <view class="icon-arrow">
+                <image src="../../images/Icon/arrow-up.png"></image>
+                <image src="../../images/Icon/arrow-down.png"></image>
+            </view>
+        </view>
+        <view class="canshu" bindtap="chageActive" data-itemnum="1">
+            <view wx:if="{{activeitem == 1}}" class="oderBy active">价格</view>
+            <view wx:else class="oderBy">价格</view>
+            <view class="icon-arrow">
+                <image src="../../images/Icon/arrow-up.png"></image>
+                <image src="../../images/Icon/arrow-down.png"></image>
+            </view>
+        </view>
+        <view class="canshu" bindtap="chageActive" data-itemnum="2">
+            <view wx:if="{{activeitem == 2}}" class="oderBy active">销量</view>
+            <view wx:else class="oderBy">销量</view>
+            <view class="icon-arrow">
+                <image src="../../images/Icon/arrow-up.png"></image>
+                <image src="../../images/Icon/arrow-down.png"></image>
+            </view>
+        </view>
+        <view class="canshu" bindtap="chageActive" data-itemnum="3">
+            <view wx:if="{{activeitem == 3}}" class="oderBy active">人气</view>
+            <view wx:else class="oderBy">人气</view>
+            <view class="icon-arrow">
+                <image src="../../images/Icon/arrow-up.png"></image>
+                <image src="../../images/Icon/arrow-down.png"></image>
+            </view>
+        </view>
+    </view>
+    <view class="getSmallline" style="margin-top: 180rpx;"></view>
+    <!--商品列表-->
+    <!--必须要给滚动条一个固定高度，才能触发bindscroll事件！！-->
+    <view  class="list-product">
+        <block wx:for="{{datalist}}">
+            <view class="productBox" bindtap="getDetail" data-detail="{{item.id}}">
+                <view class="productInfo">
+                    <view class="imgInfo">
+                        <image src="{{item.imgsrc}}"></image>
+                    </view>
+                    <view class="textInfo">
+                        <view class="classname">{{item.name}}</view>
+                        <view class="belongtoclass">{{item.belongToClass}}</view>
+                        <view class="rangeOfApplication">农田，庭院，阳台，客厅</view>
+                        <view class="function">美观</view>
+                        <view class="productValue">¥{{item.value}}</view>
+                        <view class="row">
+                            <view class="commentNum">996</view>
+                            <view>条评价</view>
+                            <view class="percentNum">89</view>
+                            <view>%好评</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </view>
+    <!--回到顶部-->
+    <view class="gotop" wx:if="{{scrollTop.goTop_show}}" catchtap="goTopFun">
+        <image src="../../images/Icon/goTop.png"></image>
+    </view>
+</scroll-view>

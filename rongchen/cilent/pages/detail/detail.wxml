@@ -1,0 +1,138 @@
+<view class="container">
+  <scroll-view scroll-y="true" bindscrolltoupper="pullDownRefresh" scroll-top="{{scrollTop}}">
+  <!--轮播图-->
+    <view class='banner-container'>
+      <swiper class="img-wrapper" indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true" indicator-color="rgba(255,255,255,.8)" indicator-active-color="rgba(0,0,0,.5)">
+        <block wx:for="{{detailData.detailimg}}" wx:key="*this">
+          <swiper-item>
+            <image src="{{item}}" class="slide-image" />
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <!--分割线-->
+    <view class="getline"></view>
+
+    <view class="swiper-tab ">  
+        <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">商品</view>  
+        <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">详情</view>
+        <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">评价</view> 
+    </view>  
+    <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="" bindchange="bindChange">  
+        <!-- tab1 -->  
+        <swiper-item style="height: auto;" class="tab1">  
+            <view class="row_1">
+                <view>商品介绍:</view>
+                <text>{{detailData.detailtext}}</text>
+                <text bindtap="setCurrentTab" style="float:right ; color:#FF8C00" data-tabvalue="1">>>详情</text>
+            </view>
+            <view class="row_2">
+                <text class="texttitle">规格选择:</text>
+               
+                <text wx:if="{{size == 0}}" bindtap="setBigValue" class="setSize active" style="margin-left: 240rpx">大</text>
+                <text wx:else bindtap="setBigValue" class="setSize" style="margin-left: 240rpx">大</text>
+                <text wx:if="{{size == 1}}" bindtap="setNormalValue" class="setSize active">中</text>
+                <text wx:else bindtap="setNormalValue" class="setSize ">中</text>
+                <text wx:if="{{size == 2}}" bindtap="setSmallValue" class="setSize active">小</text>
+                <text wx:else bindtap="setSmallValue" class="setSize">小</text>
+            </view>
+            <view class="row_3">
+                <text class="texttitle">促销活动:</text>
+                <text class="textcontent">暂无</text>
+            </view>
+            <view class="row_4">
+                <text class="texttitle">价格:</text>
+                <text class="textcontent" style="color:red">¥{{selectedValue}}</text>
+            </view>
+            <view class="row_5">
+                <view class="texttitle">
+                    <text>评价(654)</text>
+                    <view style="display: inline-block; float:right;" bindtap="setCurrentTab" data-tabvalue="2">
+                        <text style="color:#000000; margin-right: 10rpx;">好评度</text>
+                        <text style="color:#EE0000; margin-right: 10rpx;">98%</text>
+                        <text>></text>
+                    </view>
+                </view>
+                <!--分割线-->
+                
+                <view class="comment">
+                    <block wx:for="{{usrComment}}" wx:key="*this">
+                        <view class="getSmallline"></view>
+                        <view class="comment-list">
+                            <view class="comment-row1">
+                                <image src="{{item.usrImg}}" class="comment-user"></image>
+                            <text class="DateNumber" >{{item.date}}</text>
+                            </view>
+                            <view class="comment-row2">
+                                <view class="comment-detail">
+                                <text>{{item.commentdetail}}</text>
+                            </view>
+                            </view>
+                        </view>
+                    </block>
+                </view>
+            </view>
+        </swiper-item>  
+        <!-- tab2 -->  
+        <swiper-item style="height: auto;" class="tab2">  
+            <view class="row_1">
+                <text class="texttile">学名:</text>
+                <text class="textcontent">{{detailData.name}}</text>
+            </view>
+            <view class="row_2">
+                <text class="texttile">别名:</text>
+                <text class="textcontent">{{detailData.anothername}}</text>
+            </view>
+            <view class="row_3">
+                <text class="texttile">科属:</text>
+                <text class="textcontent">{{detailData.genus}}</text>
+            </view>
+            <view class="row_4">
+                <text class="texttile">适用空间:</text>
+                <text class="textcontent">{{detailData.belongtoclass}}</text>
+            </view>
+            <view class="getline"></view>
+            <view class="row_5">
+                <view class="texttile">生活习性:</view>
+                <view class="tab2-contentTxt">{{detailData.habit}}</view>
+            </view>
+            <view class="row_6">
+                <view class="texttile">栽培技术:</view>
+                <view class="tab2-contentTxt">{{detailData.technology}}</view>
+            </view>
+            <!--高度不够暂时补图-->
+            <image src="{{detailData.imgSrc}}" style="width: 100%; height: 600rpx;"></image>
+        </swiper-item>  
+        <!--tab3-->
+        <swiper-item style="height: auto;" class="tab3">
+            <view class="detailcomment">
+                <block wx:for="{{usrCommentDetail}}" wx:key="*this">
+                        <view class="getSmallline"></view>
+                        <view class="comment-list">
+                            <view class="comment-row1">
+                                <image src="{{item.usrImg}}" class="comment-user"></image>
+                            <text class="DateNumber" >{{item.date}}</text>
+                            </view>
+                            <view class="comment-row2">
+                                <view class="comment-detail">
+                                <text>{{item.commentdetail}}</text>
+                            </view>
+                            </view>
+                        </view>
+                    </block>
+            </view>
+        </swiper-item>
+    </swiper> 
+    <view id="getlineArea"></view>
+    
+  </scroll-view> 
+</view>
+<view class="end-banner">
+        <text style="float:left; margin:30rpx 10rpx 20rpx;">请选择：</text>
+        <image src="../../images/Icon/add.png" class="changenumberLf" catchtap="addcargo"></image>
+        <textarea value="{{cargoNumber}}" fixed="true" maxlength="2" id="textarea"/>
+        <image src="../../images/Icon/reduce.png" class="changenumberRt" catchtap="reducecargo"></image>
+        <text id="SpendMoney" wx:if="{{SpendMoney}}">¥{{SpendMoney}}</text>
+        <view id="btnCart" bindtap="addToCart"> <image src="../../images/Icon/cart.png"></image><text style="display:inline-block; margin-top:40rpx;">加入购物车</text></view> 
+</view>

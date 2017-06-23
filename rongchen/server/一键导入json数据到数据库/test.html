@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="data.js"></script>
+</head>
+<body>
+	
+	<div id="div1" style="background: red; width: 100px;  height:  100px;"></div>
+
+
+	<script type="text/javascript">
+		var div1 = document.getElementById("div1");
+        var jsonData = JSON.stringify(local_database);
+        
+		div1.onclick = function(){
+			console.log("点击！");
+			var ajax = new XMLHttpRequest();
+                ajax.open('post','test.php');
+                ajax.setRequestHeader('Content-type','application/json');
+                //将要post的json数组
+                console.log(jsonData);
+                ajax.send(jsonData);
+                //绑定onreadystatechange事件
+                ajax.onreadystatechange=function(){
+                //判断如果请求的状态是否成功
+             if (ajax.readyState==4&&ajax.status==200) {      
+
+                 console.log(ajax.responseText);
+             };
+           }
+           
+		}
+				
+
+	</script>
+</body>
+</html>

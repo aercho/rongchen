@@ -1,0 +1,26 @@
+<!--pages/ucenter/ucenter.wxml-->
+<view class="userinfo">
+    <image src="{{img_bg}}" class="img_bg" />
+    <image src="{{userInfo.avatarUrl}}" class="imglogo" />
+    <text class="name">{{userInfo.nickName}}</text>
+</view>
+<!--我的订单-->
+<view class="order">
+    <view class="top box">
+        <text>我的订单</text>
+        <text class="text2">全部订单 ></text>
+    </view>
+    <view class="content flexbox">
+        <view  wx:for="{{order_gaid}}" wx:key="{{item.id}}" class="item"  hover-class = "hover_item">
+            <image src="{{item.img}}" />
+            <text class="text">{{item.state}}</text>
+        </view>
+    </view>
+</view>
+
+<view style = "background-color:#F5F5F5;height:10px;width:100%;margin-top:60px;"></view>
+    <view wx:for-items = "{{other_list}}" class = "other_list_item">
+         <text class = "other_item_tile">{{item}}</text>
+        <image src="../../images/img/rightTrangle.png" class = "order_image other_list_image"></image>
+        <view style = "position:absolute;background-color:#F5F5F5;height:1px;width:100%;bottom:0px;rihgt:0px;"></view>
+        </view>

@@ -1,0 +1,116 @@
+/* pages/productlist/productlist.wxss */
+.search-border{
+    border-radius: 10rpx;
+    width: 80%;
+    height: 64rpx;
+}
+.searchBox{
+    height: 100rpx;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+}
+.search{
+    width: 100%;
+    display: inline-block;
+    height: 65rpx;
+    font-size: 30rpx;
+}
+.searchImg{
+    width: 65rpx;
+    height: 65rpx;
+}
+.headerBar{
+    width: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    margin-top: -100rpx;
+    height: 100rpx;
+    justify-content:space-around;
+    background: #FFFFFF;
+    z-index: 100;
+}
+.canshu{
+    width: 22%;
+    height: 100rpx;
+    text-align: center;
+    line-height: 100rpx;
+    position: relative;
+}
+.oderBy{
+    font-size: 30rpx;
+}
+.active{
+    color: #FF0000;
+}
+.icon-arrow{
+    position: absolute;
+    top: 28rpx;
+    left: 120rpx;
+}
+.icon-arrow image{
+    display: block;
+    width: 20rpx;
+    height: 20rpx;
+}
+
+.productBox{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1rpx solid #777777;
+    padding: 40rpx 10rpx 40rpx 20rpx;
+}
+.productInfo{
+    display: flex;
+    flex-direction: row;
+}
+.productInfo image{
+    width: 260rpx;
+    height: 260rpx;
+    border-radius: 20rpx;
+}
+.imgInfo{
+    margin-left: 20rpx;
+}
+.textInfo{
+    margin-left: 20rpx;
+}
+.classname{
+    font-size: 36rpx; font-weight: bold;margin-top: 20rpx;
+}
+.belongtoclass{
+    font-size: 26rpx; color: #ABABAB;
+}
+.rangeOfApplication{
+    font-size: 26rpx; color: #ABABAB;
+}
+.function{
+    font-size: 26rpx; color: #ABABAB;
+}
+.productValue{
+    color: #EE0000;
+    font-weight: bolder;
+    margin-top: 20rpx;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    font-size: 26rpx;
+    color: #ABABAB;
+}
+.percentNum{
+    margin-left: 100rpx; 
+}
+
+.gotop{
+    width: 60rpx;
+    height: 60rpx;
+    position: fixed;
+    right: 10rpx;
+    bottom: 60rpx;
+}
+.gotop image{
+    width: 60rpx;
+    height: 60rpx;
+}

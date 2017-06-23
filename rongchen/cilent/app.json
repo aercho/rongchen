@@ -1,0 +1,45 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/productlist/productlist",
+    "pages/classify/classify",
+    "pages/detail/detail",
+    "pages/cart/cart",
+    "pages/mine/mine",
+    "pages/logs/logs",
+    "pages/search/search"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#6B8E23",
+    "navigationBarTitleText": "荣成园林",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color": "#201B18",
+    "borderStyle": "black",
+    "backgroundColor":"#eee",
+    "selectedColor":"#b0d1bd",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "images/Icon/Tabbar-icon/home.png",
+      "selectedIconPath": "images/Icon/Tabbar-icon/home-select.png"
+    },{
+      "pagePath": "pages/classify/classify",
+      "text": "分类",
+      "iconPath": "images/Icon/Tabbar-icon/classify.png",
+      "selectedIconPath": "images/Icon/Tabbar-icon/classify-select.png"
+    },{
+      "pagePath": "pages/cart/cart",
+      "text": "购物车",
+      "iconPath": "images/Icon/Tabbar-icon/cart.png",
+      "selectedIconPath": "images/Icon/Tabbar-icon/cart-select.png"
+    },{
+      "pagePath": "pages/mine/mine",
+      "text": "我的",
+      "iconPath": "images/Icon/Tabbar-icon/account.png",
+      "selectedIconPath": "images/Icon/Tabbar-icon/account-select.png"
+    }]
+  }
+}
